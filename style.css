@@ -1,0 +1,707 @@
+@font-face{
+    font-family: myfont;
+    src:url('fonts/Anaphora-Stencil-Fat-trial.ttf');
+}
+@font-face {
+    font-family: readmorefont;
+    src: url('fonts/Metric-SemiBold.ttf');
+}
+@font-face {
+    font-family: readmorebolder;
+    src: url('fonts/Metric-Bold.ttf');
+}
+@font-face {
+    font-family: readmoreregular;
+    src: url('fonts/Metric-Regular.ttf');
+}
+
+/* CSS Reset */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* background */
+#bg{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 421px;
+}
+#bg::before{
+    content:"";
+    background : linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url('images/sawmill-brewery-OCT20-1304_2500x.webp')no-repeat center center/cover;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100vh;
+    z-index:-1;
+    /* opacity:0.3; */
+}
+
+/* navbar */
+#navbar{
+    /* border:2px solid black; */
+    display: flex;
+    align-items:center;
+    position: relative;
+    top: 8px;
+}
+#navbar::before{
+    content:"";
+    /* background-color:#391b00; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    opacity:0.7;
+}
+
+
+#mid{
+    font-size: 3rem;
+    /* font-weight: 700; */
+    letter-spacing: 0.03rem;
+    color: rgb(255, 255, 255);
+    font-family:readmorebolder;
+    
+    /* border:2px solid rgb(0, 0, 0); */
+    display:block;
+    width:195 px;
+    margin:18px auto;
+}
+#mid:hover{
+    cursor:pointer;
+}
+#mid svg .fill{
+    fill: #f5eadb;  
+    transition-property: fill;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in; 
+}
+#mid svg .fill:hover {
+    fill: #cdb575;   
+}
+#right{
+    font-size:0.9rem;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.04rem;
+    color:white;
+    /* border:2px solid rgb(0, 0, 0); */
+    display:flex;
+    position: absolute;
+    top:34px;
+    right:122px;
+    padding:2px 2px;
+} 
+.right1{
+    padding:4px 10px;
+    position: relative;
+    right: -24px;
+    top:-3px;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.right1:hover {
+    color: #cdb575;
+    cursor:pointer;
+}
+#left{
+    font-size:0.9rem;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.04rem;
+    color:white;
+    text-align: left;
+    font-size:17px;
+    /* border:2px solid rgb(0, 0, 0); */
+    position: absolute;
+    top:34px;
+    left:116px;
+    padding:2px 2px;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#left:hover{
+    color:#cdb575;
+    cursor: pointer;
+}
+
+/* smokoroom */
+.smokoroom{
+    background-color: #f5eadb;
+    display: flex;
+    flex-direction: column;
+    padding:3px 335px;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: absolute;
+    top: 657px;
+    width: 50.3%;
+}
+.smokoroom::before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 500px;
+    z-index:-1;
+    opacity:0.3;
+}
+
+.smokoroom h2{
+    color: #a15b3c;
+    position: relative;
+    top: -35px;
+    font-family:readmorebolder;
+    font-weight: 790;
+}
+.smokoroom p{
+    color: #5a5a56;
+    position: relative;
+    display: flex;
+    text-align: left;
+    font-size: 2.25rem;
+    line-height: 1.22222;
+    max-width: 47.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* font-family: 'Meriweather', serif; */
+    font-weight: 500;
+    width: 103%;
+}
+hr{
+    color: black;
+    position: absolute;
+    top: 100vh;
+    width: 90%;
+    border-bottom: thin;
+    z-index: 2;
+}
+
+/* opening hours*/
+.opening{
+    background-color: #f5eadb;
+    display: flex;
+    flex-direction: column;
+    padding:3px 335px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    top: 655px;
+    letter-spacing: 0.06rem;
+}
+.opening::before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 500px;
+    z-index:-1;
+    opacity:0.3;
+}
+#opening1{
+    color: #5a5a56;
+}
+#dog{
+    color: #5a5a56;
+}
+.opening h3{
+    position: relative;
+    top: 14px;
+    font-weight: 790;
+    color: #a15b3c;
+    margin-bottom: 1.9rem;
+    margin-top: 110px;
+    font-family:readmorebolder;
+}
+.please{
+    margin-top:1.25rem;
+    text-align: center;
+}
+#dog h4{
+    margin-bottom: 0.5rem;
+}
+.dogpara{
+    line-height:1.5;
+    position: relative;
+    top: -4px;
+}
+.opening h4{
+    font-family: readmorefont;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.03rem;
+}
+
+
+/* menu */
+#menu{
+    display:flex;
+    flex-direction: column;
+    height: 106.55vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    top:655px;
+    width:50.3%;
+    padding:3px 335px;   
+    background: rgba(0, 0, 0, 0.934);
+    
+}
+
+#menu::before{
+    content:"";
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url('images/placeholder-smokoroom-02_2500x.webp')no-repeat center center/cover;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:106.55vh;
+    /* opacity:0.32; */
+}
+
+#menu h1{
+    margin-bottom: 0.5rem;
+    font-family:readmorebolder;
+    line-height: 1.5;
+    position: relative;
+    letter-spacing: 0.07rem;
+    color: #cab67e;
+}
+#menu h3{
+    line-height: 1.5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.04rem;
+    font-weight:700;
+    color: #cab67e;
+    position: relative;
+    letter-spacing: 0.07rem;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#menu h3:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#menu p{
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05rem;
+    color: white;
+    position: relative;
+    letter-spacing: 0.07rem;
+}
+
+
+/* RESERVATIONS */
+#res{
+    /* border:2px solid red; */
+    background-color: #f5eadb;
+    position:relative;
+    height: 139vh;
+    top: 651px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#res::before{
+    /* border:2px solid red; */
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    /* height:574px; */
+}
+#res h1{
+    font-family:readmorebolder;
+    margin-bottom: 0.5rem;
+    font-weight:770;
+    line-height: 1.5;
+    letter-spacing: 0.07rem;
+    color:#a15b3c;
+}
+#res h2{
+    font-size: 1.29rem;
+    letter-spacing: 0.07rem;
+    margin-bottom: 0.625rem;
+    line-height: 1.16667;
+    font-weight: 650;
+    color:#5a5a56;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#res .mgb{
+    margin-bottom:0.625rem;
+}
+#res .mgb1{
+    margin-bottom:1.25rem;
+}
+#res .mgb2{
+    margin-bottom:1.25rem;
+}
+#res .lsp{
+    font-weight: 500;
+    color:#5a5a56;
+    font-size: 1rem;
+    line-height:1.5rem;
+    letter-spacing: 0.04rem;
+}
+#res hr{
+    position: relative;
+    top: 11vh;
+    color:#5a5a56;
+    width:89%;
+    height: 1px;
+    border:none;
+    background-color:#5a5a56;
+}
+
+
+/* EVENTS */
+
+#events{
+    background-color: #f5eadb;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: left;
+    align-items: flex-start; */
+    justify-content: center;
+    align-items: center;
+    top: 651px;
+    /* height: 537.98px; */
+    height: 33.6243rem
+}
+#events::before{
+    position:absolute;
+    content:"";
+}
+
+
+#title{
+    position: relative;
+    top: -14px;
+    letter-spacing: 0.06rem;
+    color:#a15b3c;
+    margin-bottom: 4.75rem;
+    font-family:readmorebolder;
+    font-size:2.25rem;
+}
+
+.live{
+    right: 26.3rem;
+    top:-33px;
+    position: relative;
+    letter-spacing: 0.07rem;
+}
+.live h2{
+    font-family:readmorefont;
+    color:#5a5a56;
+    margin-bottom:1.5rem;
+    /* line-height: 1.16667; */
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.live h2:hover{
+    color:#cdb575;
+    background-color: transparent;
+    cursor: pointer;
+}
+.live h3{
+    font-family:readmorefont;
+    font-size:1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color:#5a5a56;
+    letter-spacing: 0.04rem;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.live h3:hover{
+    color:#cdb575;
+    background-color: transparent;
+    cursor: pointer;
+}
+.paralive{
+    color:#5a5a56;
+    margin-bottom: 1.5rem;
+    line-height:1.4;
+}
+.paralive2{
+    color:#5a5a56;
+    margin-bottom: 4.4rem;
+}
+
+
+/* section/FOOTER */
+#mainfooter{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0px;
+    height: 42.59vh;
+    top:650px;
+    background-color: #403f3c;
+}
+#mainfooter::before{
+    content:"";
+    position:relative;
+}   
+.fill{
+    fill: #cdb575;
+}
+#logo{
+    display: flex;
+    /* right: 71px; */
+    position: relative;
+    height: 190px;
+    /* border: 2px solid red; */
+    /* justify-content: left; */
+    /* align-items: baseline; */
+    width: 201px;
+    padding: 0px 0px;
+}
+.actual-logo{
+    position: relative;
+    right: -15px;
+    
+}
+.actual-logo path{
+    transition-property:fill;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.actual-logo path:hover {
+    fill:#f5eadb; 
+    cursor:pointer;
+    background: transparent;
+}
+#subs{
+    width:34.6%;
+    line-height: 1.28571;
+    /* font-weight: 600; */
+    align-items: left;
+    justify-content: left;
+    font-family:readmorefont;
+    color:#cab67e;
+}
+#subs h3{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.06rem;
+}
+#subs p{
+    letter-spacing: .04em;
+    font-size: .875rem;
+    line-height: 1.28571;
+    font-weight: 500;
+    font-family:readmoreregular;
+    margin-bottom: 0.5rem;
+    margin: 0px 0px 20px;
+}
+form .input-group .form-control{
+    border: none;
+    border-bottom: 1px solid #cdb575;
+    background-color: #403f3c;  
+    padding-left: 0;
+    /* padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem; */
+    margin-right: 0.4rem;
+    width: 50.5%;
+}
+.form-control{
+    /* width: 100%; */
+    padding: 0.625rem 1.25rem;
+}
+::placeholder{
+    color:#887c58;
+    font-family:readmoreregular;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+form button{
+    background-color: #403f3c;
+    border:none;
+}
+.three{
+    display: flex;
+    flex-direction: row;
+    
+}
+#shop{
+    padding:0px 10px;
+    width:140px;
+    align-items: left;
+    justify-content: left;
+    color:#cab67e;
+    line-height: 1.4rem;
+    letter-spacing: .04em;
+}
+#shop h3{
+    font-family: readmorefont;
+    font-size: 1rem;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#shop h3:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#shop p{
+    line-height: 1.54;
+    font-family: readmoreregular;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#shop p:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#brew{
+    padding:0px 10px;
+    width:140px;
+    align-items: left;
+    justify-content: left;
+    font-family:readmorefont;
+    color:#cab67e;
+    line-height: 1.4rem;
+    letter-spacing: .04em;
+}
+#brew h3{
+    font-family: readmorefont;
+    font-size: 1rem;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#brew h3:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#brew p{
+    line-height: 1.54;
+    font-family: readmoreregular;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#brew p:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#sroom{
+    padding:0px 10px;
+    width:140px;
+    align-items: left;
+    justify-content: left;
+    font-family:readmorefont;
+    color:#cab67e;
+    line-height: 1.4rem;
+    letter-spacing: .04em;
+}
+#sroom h3{
+    font-family: readmorefont;
+    font-size: 1rem;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#sroom h3:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+#sroom p{
+    line-height: 1.54;
+    font-family: readmoreregular;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#sroom p:hover{
+    color:#ffeed4;
+    cursor: pointer;
+}
+
+
+/* footer copyrigth */
+footer{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    top: 672%;
+    width: 100%;
+}
+footer::before{
+    content: "";
+    position: absolute;
+}
+#copyright{
+    font-family: readmoreregular;
+    font-size: 0.9rem;
+    color:#cab67e;
+    position:absolute;
+    top: 29%;
+    left:115px;
+    letter-spacing: 0.03rem;
+}
+#social{
+    position: absolute;
+    right:111px;
+    top: 29%;
+}
+#social a{
+    font-family: readmoreregular;
+    font-size: 0.9rem;
+    color:#cab67e;
+    text-decoration: none;
+    padding: 0px 4px;
+    letter-spacing: 0.03rem;
+    transition-property:color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+#social a:hover{
+    color:#ffeed4;
+    cursor: pointer;
+    /* font-weight: 200; */
+}
+/* Utilities Classes */
+.h-primary{
+    font-size: 2.25rem;
+    line-height: 1.22222;
+}
+.p-size{
+    font-size:1rem
+}
+.center{
+    text-align: center;
+}
+.lh{
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
